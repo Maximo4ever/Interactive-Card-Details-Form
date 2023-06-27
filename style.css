@@ -1,0 +1,186 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Linear-gradient-active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --Red-input-errors: hsl(0, 100%, 66%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+}
+.header {
+  position: relative;
+  width: 100%;
+  background-image: url("./assets/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 60px;
+  padding: 15px;
+}
+.cardback, .cardfront {
+  width: 82%;
+  max-width: 330px;
+  min-width: 320px;
+  height: 180px;
+  color: var(--Light-grayish-violet);
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 22px;
+  white-space: nowrap;
+}
+.cardback {
+  background-image: url("./assets/bg-card-back.png");
+  position: relative;
+  margin-left: auto;
+}
+.cardback__cvc {
+  position: absolute;
+  right: 40px;
+  top: 79px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.cardfront {
+  background-image: url("./assets/bg-card-front.png");
+  position: absolute;
+  /* bottom: -38%; */
+  bottom: -82px;
+} 
+.cardfront__logo img {
+  height: 35px;
+}
+.cardfront__number {
+  margin-top: 36px;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+.cardfront__security {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: auto;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+.form label {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--Very-dark-violet);
+  margin-bottom: 8px;
+}
+.form input {
+  width: 100%;
+  font-size: 16px;
+  padding: 13px;
+  border-radius: 8px;
+  border: 1px solid var(--Dark-grayish-violet);
+  margin-bottom: 18px;
+}
+.form input::placeholder {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--Dark-grayish-violet);
+}
+.form__date, .form__date div {
+  width: 100%;
+  display: flex;
+  column-gap: 10px;
+}
+.form__date {
+}
+.form button {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--Very-dark-violet);
+  color: #fff;
+  margin-top: 16px;
+}
+
+@media (min-width: 1100px) {
+  .main {
+    min-height: 100vh;
+    max-width: none;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header {
+    min-height: 100vh;
+    width: 40%;
+    max-width: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    row-gap: 35px;
+    margin-bottom: 0;
+  }
+  .cardback, .cardfront {
+    width: 100%;
+    max-width: 400px;
+    height: 235px;
+    color: var(--Light-grayish-violet);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 22px;
+    white-space: nowrap;
+  }
+  .cardback {
+    margin-left: 105%;
+  }
+  .cardback__cvc {
+    top: 105px;
+    font-size: 15px;
+  }
+  .cardfront {
+    margin-left: 72%;
+    position: unset;
+  }
+  .cardfront__number {
+    font-size: 30px;
+    margin-top: 60px;
+  }
+  .cardfront__security {
+    font-size: 15px;
+    margin-top: 30px;
+  }
+  .form {
+    margin: auto;
+    width: 530px;
+    padding-left: 150px;
+  }
+}
+@media (min-width: 1600px) {
+  
+  .form {
+    padding-left: 0;
+    width: auto;
+  }
+}
